@@ -1,15 +1,15 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.0
-milestone_name: MVP
-status: shipped
-last_updated: "2026-05-18T13:30:00Z"
+milestone: v1.1
+milestone_name: Advanced Capabilities
+status: planning
+last_updated: "2026-05-18T14:00:00Z"
 progress:
-  total_phases: 8
-  completed_phases: 8
-  total_plans: 8
-  completed_plans: 8
-  percent: 100
+  total_phases: 0
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
+  percent: 0
 ---
 
 # State: pwnMyCTF
@@ -18,9 +18,11 @@ progress:
 
 ## Project Reference
 
+See: .planning/PROJECT.md (updated 2026-05-18)
+
 **Core Value:** Flag extraction with zero user interaction — analyze input, detect type, solve, output.
 
-**Current Focus:** v1.0 MVP shipped — PR #1 awaiting merge
+**Current Focus:** v1.1 Planning — defining requirements and roadmap
 
 ---
 
@@ -28,10 +30,11 @@ progress:
 
 | Attribute | Value |
 |-----------|-------|
-| **Milestone** | v1.0 MVP — SHIPPED |
-| **Phase** | All 8 phases complete |
-| **Plan** | All 8 plans complete |
-| **Status** | Shipped, PR #1 open |
+| **Milestone** | v1.1 Advanced Capabilities — PLANNING |
+| **Phase** | Not started (defining requirements) |
+| **Plan** | — |
+| **Status** | Defining requirements |
+| **Last activity** | 2026-05-18 — Milestone v1.1 started |
 
 ---
 
@@ -39,10 +42,9 @@ progress:
 
 | Metric | Value |
 |--------|-------|
-| v1 Requirements | 47 total |
-| Completed | 47 (100%) |
-| Phases | 8 |
-| Plans | 8 |
+| v1 Requirements | 47 total (all complete) |
+| v1.1 Requirements | TBD (defining) |
+| Phases | v1.0: 8 complete, v1.1: TBD |
 
 ---
 
@@ -50,20 +52,10 @@ progress:
 
 | Decision | Rationale | Status |
 |----------|-----------|--------|
-| Modular pipeline architecture | Each category has specialized solvers | ✓ Validated |
-| Auto-detect unless forced | Reduces friction for common case | ✓ Validated |
-| Flag-first output | CTF tools should output flags | ✓ Validated |
-| Bash-native categories first | Web, OSINT highest confidence | ✓ Validated |
-| PWN last with managed expectations | Pure bash cannot replicate pwntools | ✓ Validated |
+| Pure Python architecture | Full crypto, binary, web tool support | In progress |
+| Modular solver classes | Consistent interface across categories | In progress |
+| Python 3 as core language | pwntools, z3, sympy integration | Planned |
 
 ---
 
-## Shipping Status
-
-**PR:** https://github.com/izpan/pwnMyCTF/pull/1
-
-**Next step:** Merge PR and start v1.1 planning
-
----
-
-*State updated: 2026-05-18 after v1.0 milestone completion*
+*State updated: 2026-05-18 after v1.1 milestone start*

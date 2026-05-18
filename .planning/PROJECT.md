@@ -2,18 +2,27 @@
 
 ## What This Is
 
-An autonomous CTF challenge solver in pure bash — give it a challenge (file, URL, directory) and get the flag. All categories supported (Web, Crypto, PWN, Reverse, Forensics, OSINT). Fully automatic detection and solving unless `--force` override specified.
+An autonomous CTF challenge solver in pure Python — give it a challenge (file, URL, directory) and get the flag. All categories supported (Web, Crypto, PWN, Reverse, Forensics, OSINT). Fully automatic detection and solving unless `--force` override specified.
 
 ## Core Value
 
 Flag extraction with zero user interaction — analyze input, detect type, solve, output.
 
-## Current State
+## Current Milestone: v1.1 Advanced Capabilities
 
-**v1.0 MVP shipped:** 2026-05-18
-- 47 v1 requirements complete
-- 8 phases executed and archived
-- PR created: https://github.com/izpan/pwnMyCTF/pull/1
+**Goal:** Transform pwnMyCTF from basic flag extractor to serious CTF weapon with full crypto analysis, binary exploitation, advanced forensics, and web attack capabilities.
+
+**Target features:**
+1. Multi-layer encoding pipeline (Base16-85, binary, hex, URL, Unicode, custom)
+2. Classical ciphers (Caesar, Vigenere, Playfair, Hill, Bacon, Morse)
+3. XOR cryptanalysis (single-byte, multi-byte, frequency analysis)
+4. Modern encryption (RSA attacks, padding oracle, DH/ECDH)
+5. Hash attacks (identification, length extension, custom reverse)
+6. PRNG attacks (MT, LCG, Xorshift prediction)
+7. Binary exploitation (pwntools integration, ROP, heap)
+8. Advanced forensics (steganography, memory, PCAP)
+9. Web attacks (blind SQLi, JWT, SSTI, SSRF)
+10. CTF platform integration (CTFd API)
 
 ## Requirements
 
@@ -30,43 +39,37 @@ Flag extraction with zero user interaction — analyze input, detect type, solve
 
 ### Active
 
-- [ ] v2 requirements deferred (see .planning/milestones/v1.0-REQUIREMENTS.md)
+(v1.1 requirements in .planning/REQUIREMENTS.md)
 
 ### Out of Scope
 
-- [AI integration] — Pure bash only, no AI/LLM
-- [Docker] — No containerization
-- [Python Deps Required] — Optional pwntools allowed but not required
+- [AI/LLM integration] — Pure bash/Python only, no external API calls
+- [Docker sandbox] — No containerization
+- [GUI] — CLI tool only
 
 ## Context
 
-CTF (Capture The Flag) competitions involve solving security challenges across multiple categories. Challenges come as files, URLs to web services, or directories with multiple artifacts. The solver needs to analyze the input, determine what category/type it is, and apply appropriate techniques to extract the flag.
+CTF (Capture The Flag) competitions involve solving security challenges across multiple categories. v1.1 transforms the tool from basic flag extraction to comprehensive CTF solving with advanced crypto, binary exploitation, and web attack capabilities.
 
 ## Constraints
 
-- **Pure bash**: No compiled binaries, only bash scripts and standard Unix tools
-- **No AI**: No LLM or ML integration
-- **No Docker**: No containerized solutions
-- **No required deps**: Optional pwntools allowed but not required
+- **Python 3**: Core language for all advanced capabilities
+- **Pure Python**: No compiled binaries, only Python and standard Unix tools
+- **Tool Discovery**: Auto-detect required tools (z3, pwntools, etc.)
+- **Dependency Management**: Install missing packages via pip when needed
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Modular pipeline architecture | Each category has specialized solvers | ✓ Validated in v1.0 |
-| Auto-detect unless forced | Reduces friction for common case | ✓ Validated in v1.0 |
-| Flag-first output | CTF tools should output flags | ✓ Validated in v1.0 |
-| Bash-native categories first | Web, OSINT highest confidence | ✓ Validated in v1.0 |
-| PWN last with managed expectations | Pure bash cannot replicate pwntools | ✓ Validated in v1.0 |
-
-## Next Steps
-
-- Merge PR #1 when ready
-- `/gsd-new-milestone` to start v1.1 planning
+| Pure Python architecture | Full crypto, binary, web tool support | In progress |
+| Modular solver classes | Consistent interface across categories | In progress |
+| Auto-install dependencies | Reduce setup friction | Planned |
+| CTF platform integration | Automate solve-submit loop | Planned |
 
 ---
 
-*Last updated: 2026-05-18 after v1.0 milestone completion*
+*Last updated: 2026-05-18 after v1.1 milestone start*
 
 ## Evolution
 
