@@ -1,0 +1,15 @@
+.planning/
+test/
+.git/
+*.swp
+*.swo
+*~
+.DS_Store
+*.tmp
+*.log
+*.bak
+*.cache
+.venv/
+venv/
+__pycache__/
+*.pyc
