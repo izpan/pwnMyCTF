@@ -156,7 +156,7 @@ solve_web_cmd_post() {
                 
                 # Restore original parameter
                 params[$i]="$original"
-            done
+            fi
         done
     done
     
