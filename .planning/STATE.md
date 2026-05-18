@@ -1,9 +1,9 @@
 ---
 gsd_state_version: 1.0
 milestone: v1.0
-milestone_name: milestone
+milestone_name: MVP
 status: shipped
-last_updated: "2026-05-18T12:59:00Z"
+last_updated: "2026-05-18T13:30:00Z"
 progress:
   total_phases: 8
   completed_phases: 8
@@ -14,13 +14,13 @@ progress:
 
 # State: pwnMyCTF
 
-**Last updated:** 2025-05-17
+**Last updated:** 2026-05-18
 
 ## Project Reference
 
 **Core Value:** Flag extraction with zero user interaction — analyze input, detect type, solve, output.
 
-**Current Focus:** All phases complete — pwnMyCTF tool is ready for use
+**Current Focus:** v1.0 MVP shipped — PR #1 awaiting merge
 
 ---
 
@@ -28,10 +28,10 @@ progress:
 
 | Attribute | Value |
 |-----------|-------|
-| **Phase** | 8 - Advanced Patterns |
-| **Plan** | 08-01 complete |
-| **Status** | Phase 8 complete |
-| **Progress** | 8/8 phases complete |
+| **Milestone** | v1.0 MVP — SHIPPED |
+| **Phase** | All 8 phases complete |
+| **Plan** | All 8 plans complete |
+| **Status** | Shipped, PR #1 open |
 
 ---
 
@@ -40,50 +40,30 @@ progress:
 | Metric | Value |
 |--------|-------|
 | v1 Requirements | 47 total |
-| Mapped to phases | 47 (Phases 7 & 8 are enhancement) |
+| Completed | 47 (100%) |
 | Phases | 8 |
-| Plans to be created | 8 (1 per phase) |
+| Plans | 8 |
 
 ---
 
-## Accumulated Context
-
-### Key Decisions
+## Key Decisions
 
 | Decision | Rationale | Status |
 |----------|-----------|--------|
-| Modular pipeline architecture | Each category has specialized solvers | Implemented in roadmap |
-| Auto-detect unless forced | Reduces friction for common case | Phase 2 deliverable |
-| Flag-first output | CTF tools should output flags | Phase 1 deliverable |
-| Bash-native categories first | Web, OSINT highest confidence | Phase 3 deliverable |
-| PWN last with managed expectations | Pure bash cannot replicate pwntools | Phase 7 deliverable |
-
-### Research Flags
-
-- **Phase 7 (PWN Solver):** Complex integration with GDB, limited bash-native patterns for ROP/heap — needs careful planning
-- **Phase 8 (Advanced Patterns):** Parallel execution patterns in bash need verification
-
-### Known Blockers
-
-None yet — all v1 requirements mapped to phases.
+| Modular pipeline architecture | Each category has specialized solvers | ✓ Validated |
+| Auto-detect unless forced | Reduces friction for common case | ✓ Validated |
+| Flag-first output | CTF tools should output flags | ✓ Validated |
+| Bash-native categories first | Web, OSINT highest confidence | ✓ Validated |
+| PWN last with managed expectations | Pure bash cannot replicate pwntools | ✓ Validated |
 
 ---
 
-## Session Continuity
+## Shipping Status
 
-**Roadmap created:** 8 phases derived from 48 v1 requirements
+**PR:** https://github.com/izpan/pwnMyCTF/pull/1
 
-- Phase 1: Core Infrastructure (9 requirements)
-- Phase 2: Detection Pipeline (4 requirements)
-- Phase 3: Web & OSINT Solvers (12 requirements)
-- Phase 4: Crypto Solver (5 requirements)
-- Phase 5: Forensics Solver (6 requirements)
-- Phase 6: Reverse Solver (6 requirements)
-- Phase 7: PWN Solver (5 requirements)
-- Phase 8: Advanced Patterns (enhancement)
-
-**Next step:** Tool is complete! Use `/gsd-verify` to run final verification.
+**Next step:** Merge PR and start v1.1 planning
 
 ---
 
-*State updated: 2025-05-17 after roadmap creation*
+*State updated: 2026-05-18 after v1.0 milestone completion*
