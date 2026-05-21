@@ -127,7 +127,7 @@ solve_web_sql_post() {
                 
                 # Restore original parameter
                 params[$i]="$original"
-            done
+            fi
         done
     done
     

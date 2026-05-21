@@ -26,7 +26,7 @@ source "${LIB_DIR}/retry.sh" 2>/dev/null || true
 source "${LIB_DIR}/parallel.sh" 2>/dev/null || true
 source "${LIB_DIR}/tool_discovery.sh" 2>/dev/null || true
 
-VERSION="0.1.0"
+VERSION="1.0.0"
 VERBOSE=0
 QUIET=false
 JSON_OUTPUT=false
